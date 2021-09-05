@@ -44,7 +44,7 @@ pacman -S gedit --noconfirm
 pacman -S chromium --noconfirm
 
 #Instalando Extras
-pacman -S kcalc okular gparted samba nautilus nautilus-share firewalld unzip cups cups-filters cups-pdf cups-pk-helper system-config-printer print-manager --noconfirm
+pacman -S kcalc okular gparted samba nautilus nautilus-share firewalld unzip cups cups-filters cups-pdf cups-pk-helper system-config-printer print-manager nm-connection-editor --noconfirm
 
 #Habilitando Fiweralld
 systemctl enable firewalld
