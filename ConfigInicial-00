@@ -11,7 +11,7 @@ EDITOR=nano
 #Localization
 nano /etc/locale.gen
 locale-gen
-echo "LANG=pt_BR.UTF-8" >> /etc.locale.conf
+echo "LANG=pt_BR.UTF-8" >> /etc/locale.conf
 
 #Network Configuration
 nano /etc/hostname
