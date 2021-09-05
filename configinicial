@@ -10,6 +10,9 @@ pacman -S sudo --noconfirm
 pacman -S nano --noconfirm
 EDITOR=nano
 
+#Editando arquivo sudoers
+nano /etc/sudoers
+
 #Instalando NetworkManager
 pacman -S networkmanager --noconfirm
 
