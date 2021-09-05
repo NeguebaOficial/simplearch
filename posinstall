@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Instalando Audio
+pacman -S pulseaudio
+
 #Instalando Sudo
 pacman -S sudo --noconfirm
 
@@ -16,10 +19,10 @@ systemctl enable NetworkManager
 #Instalando Xorg
 pacman -S xorg --noconfirm
 
-#Instalando xf
+#Instalando xfce4
 pacman -S xfce4 --noconfirm
 
-#Instalando goodies
+#Instalando xfce-goodies
 pacman -S xfce4-goodies --noconfirm
 
 #Instalando Lightdm
@@ -36,15 +39,31 @@ pacman -S xdg-user-dirs --noconfirm
 xdg-user-dirs-update --noconfirm
 
 #Instalando Leafpad
-pacman -S leafpad --noconfirm
+#pacman -S leafpad --noconfirm
 
 #Instalando Navegador
 pacman -S chromium --noconfirm
 
 #Instalando Extras
-pacman -S kcalc okular gparted --noconfirm
+pacman -S kcalc okular gparted samba nautilus nautilus-share firewalld unzip --noconfirm
 
 #Instalando Yaourt
-pacman -S --needed base-devel git wget yajl --noconfirm
+pacman -S --needed base-devel wget yajl --noconfirm
+git clone https://aur.archlinux.org/package-query.git
+cd package-query
+makepkg -sri
+cd
 
+git clone https://aur.archlinux.org/yaourt.git
+cd yaourt
+makepkg -sri
+cd
 
+#Instalando tema Windows 10 no xfce4
+yaourt -S xts-windows10-theme
+
+#Instalando AnyDesk
+yaourt -S anydesk-bin
+
+#Instalando OnlyOffice
+yaourt -S onlyoffice-bin
