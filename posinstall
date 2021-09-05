@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Instalando Audio
-pacman -S pulseaudio
+pacman -S pulseaudio --noconfirm
 
 #Instalando Sudo
 pacman -S sudo --noconfirm
@@ -11,7 +11,7 @@ pacman -S nano --noconfirm
 EDITOR=nano
 
 #Instalando NetworkManager
-pacman -S networkmanager
+pacman -S networkmanager --noconfirm
 
 #Habilitando o NetworkManager
 systemctl enable NetworkManager
@@ -67,3 +67,11 @@ yaourt -S anydesk-bin
 
 #Instalando OnlyOffice
 yaourt -S onlyoffice-bin
+
+#Criando Usuario Suporte
+useradd -mG wheel,audio,video,games suporte
+
+#Reiniciando
+exit
+umount -R /mnt
+reboot
