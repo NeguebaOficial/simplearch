@@ -56,6 +56,8 @@ systemctl enable firewalld
 #Criando Usuario Suporte
 useradd -mG wheel,audio,video,games suporte
 passwd suporte
+echo "LOGUE COM O USER SUPORTE"
+echo "E BAIXE O ConfgInicial-02"
 
 #Instalando Yaourt
 pacman -S --needed base-devel wget yajl --noconfirm
