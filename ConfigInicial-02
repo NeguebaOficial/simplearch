@@ -1,5 +1,8 @@
 #!bin/bash
 
+#Instalando Libre Office
+sudo pacman -S libreoffice-fresh libreoffice-fresh-pt-br --noconfirm
+
 #Instalando Yaourt
 cd Downloads
 sudo pacman -S --needed base-devel wget yajl --noconfirm
@@ -18,13 +21,9 @@ cd
 
 #Instalando tema Windows 10 no xfce4
 yaourt -S xts-windows10-theme
+xfce4-theme-switcher -t Windows-10-lb.tar.gz
 
 #Instalando AnyDesk
 yaourt -S anydesk-bin
-
-#Instalando OnlyOffice
-yaourt -S onlyoffice-bin
-
-#Reiniciando
-exit
+systemctl enable anydesk
 reboot
