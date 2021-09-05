@@ -27,5 +27,4 @@ yaourt -S onlyoffice-bin
 
 #Reiniciando
 exit
-umount -R /mnt
 reboot
