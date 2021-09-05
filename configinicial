@@ -38,8 +38,8 @@ systemctl enable lightdm
 pacman -S xdg-user-dirs --noconfirm
 xdg-user-dirs-update --noconfirm
 
-#Instalando Leafpad
-#pacman -S leafpad --noconfirm
+#Instalando Gedit
+pacman -S gedit --noconfirm
 
 #Instalando Navegador
 pacman -S chromium --noconfirm
@@ -47,14 +47,23 @@ pacman -S chromium --noconfirm
 #Instalando Extras
 pacman -S kcalc okular gparted samba nautilus nautilus-share firewalld unzip --noconfirm
 
+#Habilitando Fiweralld
+systemctl enable firewalld
+
+#Criando Usuario Suporte
+useradd -mG wheel,audio,video,games suporte
+passwd suporte
+
 #Instalando Yaourt
 pacman -S --needed base-devel wget yajl --noconfirm
 git clone https://aur.archlinux.org/package-query.git
+sudo chmod 777 package-query
 cd package-query
 makepkg -sri
 cd
 
 git clone https://aur.archlinux.org/yaourt.git
+sudo chmod 777 yaourt
 cd yaourt
 makepkg -sri
 cd
@@ -67,9 +76,6 @@ yaourt -S anydesk-bin
 
 #Instalando OnlyOffice
 yaourt -S onlyoffice-bin
-
-#Criando Usuario Suporte
-useradd -mG wheel,audio,video,games suporte
 
 #Reiniciando
 exit
