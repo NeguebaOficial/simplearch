@@ -54,6 +54,7 @@ systemctl enable cups.service
 
 #Criando Usuario Suporte
 useradd -mG wheel,audio,video,games suporte
+echo "SENHA DO USER SUPORTE"
 passwd suporte
 echo "LOGUE COM O USER SUPORTE"
 echo "E BAIXE O ConfgInicial-02"
