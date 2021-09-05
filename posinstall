@@ -1,0 +1,50 @@
+#!/bin/bash
+
+#Instalando Sudo
+pacman -S sudo --noconfirm
+
+#Instalando Editor Nano
+pacman -S nano --noconfirm
+EDITOR=nano
+
+#Instalando NetworkManager
+pacman -S networkmanager
+
+#Habilitando o NetworkManager
+systemctl enable NetworkManager
+
+#Instalando Xorg
+pacman -S xorg --noconfirm
+
+#Instalando xf
+pacman -S xfce4 --noconfirm
+
+#Instalando goodies
+pacman -S xfce4-goodies --noconfirm
+
+#Instalando Lightdm
+pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings --noconfirm
+
+#Iniciando o xfce4
+echo "exec startxfce4" >> ~/.xinitrc
+
+#Habilitando Lightdm
+systemctl enable lightdm
+
+#Criando Diretorios
+pacman -S xdg-user-dirs --noconfirm
+xdg-user-dirs-update --noconfirm
+
+#Instalando Leafpad
+pacman -S leafpad --noconfirm
+
+#Instalando Navegador
+pacman -S chromium --noconfirm
+
+#Instalando Extras
+pacman -S kcalc okular gparted --noconfirm
+
+#Instalando Yaourt
+pacman -S --needed base-devel git wget yajl --noconfirm
+
+
