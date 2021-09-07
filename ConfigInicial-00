@@ -13,12 +13,15 @@ nano /etc/locale.gen
 locale-gen
 echo "LANG=pt_BR.UTF-8" >> /etc/locale.conf
 
+#Teclado BR-ABNT2
+echo "KEYMAP=br-abnt2" >> /etc/vconsole.conf
+
 #Network Configuration
 nano /etc/hostname
 nano /etc/hosts
 
 #Root Passaword
-echo "DIGITE a SENHA DO ROOT"
+echo "DIGITE A SENHA DO ROOT"
 passwd
 
 #Boot Loader
