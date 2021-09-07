@@ -26,6 +26,6 @@ passwd
 
 #Boot Loader
 pacman -Syyu
-pacman -S grub
+pacman -S grub --noconfirm
 echo "INSTALE O GRUB"
 echo "DEPOIS CONTINUE NO ConfigInicial-01"
