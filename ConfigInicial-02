@@ -4,7 +4,6 @@
 sudo pacman -S libreoffice-fresh libreoffice-fresh-pt-br --noconfirm
 
 #Instalando Yaourt
-cd Downloads
 sudo pacman -S --needed base-devel wget yajl --noconfirm
 sudo git clone https://aur.archlinux.org/package-query.git
 sudo chmod 777 package-query
@@ -12,7 +11,6 @@ cd package-query
 makepkg -sri
 cd
 
-cd Downloads
 sudo git clone https://aur.archlinux.org/yaourt.git
 sudo chmod 777 yaourt
 cd yaourt
@@ -21,6 +19,12 @@ cd
 
 #Instalando Fontes MS
 yaourt -S ttf-ms-fonts
+
+#Instalando Google Chrome
+yaourt -S google-chrome
+
+#Instalando CPU-X
+yaourt -S cpu-x
 
 #Instalando tema Windows 10 no xfce4
 yaourt -S xts-windows10-theme
