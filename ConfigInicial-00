@@ -26,6 +26,7 @@ passwd
 
 #Boot Loader
 pacman -Syyu
+echo "Instalando o GRUB"
 pacman -S grub --noconfirm
-echo "INSTALE O GRUB"
+echo "INSTALE O grub-install --target=i386-pc /dev/sdX"
 echo "DEPOIS CONTINUE NO ConfigInicial-01"
