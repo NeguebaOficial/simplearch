@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#O Script tem como função 
+
+cvt "resolução desejada"
+xrandr --newmode
+xrandr --addmode "NomeDoDispositivo + Resolução"
+xrandr --output "NomeDoDispositivo" --mode "Resolução"
