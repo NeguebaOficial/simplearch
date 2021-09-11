@@ -20,8 +20,9 @@ cd
 #Instalando Fontes MS
 yaourt -S ttf-ms-fonts --noconfirm
 
-#Instalando Google Chrome
+#Instalando Navegadores
 yaourt -S google-chrome --noconfirm
+yaourt -S brave --noconfirm
 
 #Instalando CPU-X
 yaourt -S cpu-x --noconfirm
