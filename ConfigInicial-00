@@ -3,26 +3,32 @@
 #instalando Reflector
 pacman -S reflector
 reflector -c Brazil --save /etc/pacman.d/mirrorlist
+echo "REFLECTOR INSTALADO E CONFIGURADO"
 
 #Timezone
 ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 hwclock --systohc
+echo "TIMEZONE CONFIGURADO"
 
 #Instalando Editor Nano
 pacman -S nano --noconfirm
 EDITOR=nano
+echo "NANO INSTALADO E CONFIGURADO"
 
 #Localization
 nano /etc/locale.gen
 locale-gen
 echo "LANG=pt_BR.UTF-8" >> /etc/locale.conf
+echo "LOCAL SETADO"
 
 #Teclado BR-ABNT2
 echo "KEYMAP=br-abnt2" >> /etc/vconsole.conf
+echo "TECLADO CONFIGURADO"
 
 #Network Configuration
 nano /etc/hostname
 nano /etc/hosts
+echo "Hosts configurado"
 
 #Root Passaword
 echo "DIGITE A SENHA DO ROOT"
@@ -32,5 +38,6 @@ passwd
 pacman -Syyu
 echo "Instalando o GRUB"
 pacman -S grub --noconfirm
+echo "GRUB INSTALADO"
 echo "INSTALE O grub-install --target=i386-pc /dev/sdX"
 echo "DEPOIS CONTINUE NO ConfigInicial-01"
