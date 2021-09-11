@@ -51,5 +51,5 @@ systemctl enable cups.service
 useradd -mG wheel,audio,video,games suporte
 echo "SENHA DO USER SUPORTE"
 passwd suporte
-echo "LOGUE COM O USER SUPORTE"
-echo "E BAIXE O ConfgInicial-02"
+echo "REINICIE O COMPUTADOR E LOGUE COM O USER SUPORTE"
+echo "DEPOIS BAIXE O ConfgInicial-02"
