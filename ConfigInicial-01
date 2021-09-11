@@ -1,17 +1,15 @@
 #!bin/bash
 
 #Instalando Audio
-pacman -S pulseaudio --noconfirm
+pacman -S pulseaudio pavucontrol--noconfirm
 
 #Instalando Sudo
 pacman -S sudo --noconfirm
-
 #Editando arquivo sudoers
 nano /etc/sudoers
 
 #Instalando NetworkManager
 pacman -S networkmanager --noconfirm
-
 #Habilitando o NetworkManager
 systemctl enable NetworkManager
 
@@ -20,16 +18,13 @@ pacman -S xorg --noconfirm
 
 #Instalando xfce4
 pacman -S xfce4 --noconfirm
-
 #Instalando xfce-goodies
 pacman -S xfce4-goodies --noconfirm
-
-#Instalando Lightdm
-pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lightdm-webkit2-greeter --noconfirm
-
 #Iniciando o xfce4
 echo "exec startxfce4" >> ~/.xinitrc
 
+#Instalando Lightdm
+pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lightdm-webkit2-greeter --noconfirm
 #Habilitando Lightdm
 systemctl enable lightdm
 
