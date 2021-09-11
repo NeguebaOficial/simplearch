@@ -18,19 +18,19 @@ makepkg -sri
 cd
 
 #Instalando Fontes MS
-yaourt -S ttf-ms-fonts
+yaourt -S ttf-ms-fonts --noconfirm
 
 #Instalando Google Chrome
-yaourt -S google-chrome
+yaourt -S google-chrome --noconfirm
 
 #Instalando CPU-X
-yaourt -S cpu-x
+yaourt -S cpu-x --noconfirm
 
 #Instalando tema Windows 10 no xfce4
-yaourt -S xts-windows10-theme
+yaourt -S xts-windows10-theme --noconfirm
 xfce4-theme-switcher -t Windows-10-lb.tar.gz
 
 #Instalando AnyDesk
-yaourt -S anydesk-bin
+yaourt -S anydesk-bin --noconfirm
 systemctl enable anydesk
 reboot
