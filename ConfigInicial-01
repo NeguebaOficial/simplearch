@@ -39,7 +39,7 @@ pacman -S gedit --noconfirm
 pacman -S chromium --noconfirm
 
 #Instalando Extras
-pacman -S kcalc okular gparted samba ntfs-3g nautilus arc-icon-theme archlinux-wallpaper nautilus-share dolphin dolphin-plugins firewalld unzip cups cups-filters cups-pdf cups-pk-helper system-config-printer print-manager nm-connection-editor --noconfirm
+pacman -S kcalc okular gparted htop neofetch samba ntfs-3g nautilus arc-icon-theme archlinux-wallpaper nautilus-share dolphin dolphin-plugins firewalld unzip cups cups-filters cups-pdf cups-pk-helper system-config-printer print-manager nm-connection-editor --noconfirm
 
 #Habilitando Fiweralld
 systemctl enable firewalld
