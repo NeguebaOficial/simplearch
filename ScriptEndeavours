@@ -1,0 +1,40 @@
+#!bin/bash
+
+#Instalando Libre Office
+sudo pacman -S libreoffice-fresh libreoffice-fresh-pt-br --noconfirm
+#Instalndo Extras
+pacman -S kcalc okular gparted htop neofetch samba ntfs-3g nautilus arc-icon-theme archlinux-wallpaper nautilus-share dolphin dolphin-plugins firewalld --noconfirm
+
+systemctl enable firewalld
+
+#Instalando Yaourt
+sudo pacman -S --needed base-devel wget yajl --noconfirm
+sudo git clone https://aur.archlinux.org/package-query.git
+sudo chmod 777 package-query
+cd package-query
+makepkg -sri
+cd
+
+sudo git clone https://aur.archlinux.org/yaourt.git
+sudo chmod 777 yaourt
+cd yaourt
+makepkg -sri
+cd
+
+#Instalando Fontes MS
+yaourt -S ttf-ms-fonts --noconfirm
+
+#Instalando Navegadores
+yaourt -S google-chrome --noconfirm
+yaourt -S brave --noconfirm
+
+#Instalando CPU-X
+yaourt -S cpu-x --noconfirm
+
+#Instalando Tema Windows 10 no xfce4
+yaourt -S xts-windows10-theme --noconfirm
+xfce4-theme-switcher -t Windows-10-lb.tar.gz
+
+#Instalando AnyDesk
+yaourt -S anydesk-bin --noconfirm
+systemctl enable anydesk
