@@ -37,7 +37,8 @@ passwd
 #Boot Loader
 pacman -Syyu
 echo "Instalando o GRUB"
-pacman -S grub --noconfirm
-echo "GRUB INSTALADO"
-echo "INSTALE O grub-install --target=i386-pc /dev/sdX"
+pacman -S grub efibootmgr dosfstools --noconfirm
+
+echo "MBR grub-install --target=i386-pc /dev/sdX"
+echo "EFI grub-install --tareget=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB --recheck"
 echo "DEPOIS CONTINUE NO ConfigInicial-01"
