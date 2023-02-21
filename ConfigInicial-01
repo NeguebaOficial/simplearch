@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 #Instalando Audio
 pacman -S pulseaudio pavucontrol--noconfirm
@@ -9,7 +9,7 @@ pacman -S sudo --noconfirm
 nano /etc/sudoers
 
 #Instalando NetworkManager
-pacman -S networkmanager --noconfirm
+pacman -S net-tools networkmanager --noconfirm
 #Habilitando o NetworkManager
 systemctl enable NetworkManager
 
